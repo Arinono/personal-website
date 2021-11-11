@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: fixed content-box transparent url('/background-light.jpg') no-repeat center / cover;
+}
+body.dark {
+	background-image: url('/background-dark.jpg');
+}
