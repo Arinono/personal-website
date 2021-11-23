@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>Aurelien Arino - Introduction</title>
+	<title>Aurelien Arino</title>
 </svelte:head>
 
 <div class="flex items-center justify-center w-screen h-screen">
