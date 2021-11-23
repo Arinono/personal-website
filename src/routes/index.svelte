@@ -2,6 +2,7 @@
 	import OGlassCardContainer from '../components/organisms/GlassCardContainer.svelte'
 	import OTopBar from '../components/organisms/TopBar.svelte'
 	import MGithubButton from '../components/molecules/GithubButton.svelte'
+	import AButton from '../components/atoms/Button.svelte'
 
 	export const prerender = true
 
@@ -29,8 +30,9 @@
 						>@story.ai</a
 					>
 				</h2>
-				<div class="mt-4">
+				<div class="mt-4 flex items-center space-x-4">
 					<MGithubButton {user} />
+					<AButton href="mailto:aurelien.arino@gmail.com">contact me</AButton>
 				</div>
 			</div>
 			<img

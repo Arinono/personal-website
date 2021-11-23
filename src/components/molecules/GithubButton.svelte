@@ -7,8 +7,8 @@
 <a 
   href={`https://github.com/${user}`}
   target="_blank"
-  class="flex items-center space-x-2 w-fit-content bg-black text-white py-2 px-4 rounded-full hover:bg-gray-900 active:bg-gray-800"
+  class="flex items-center space-x-2 w-fit-content bg-black text-white py-1 px-3 rounded-full hover:bg-gray-900 active:bg-gray-800 border border-black"
 >
-  <AGithubLogo width="24" height="24" />
-  <span>GitHub</span>
+  <AGithubLogo width="16" height="16" />
+  <span class="text-sm">GitHub</span>
 </a>
