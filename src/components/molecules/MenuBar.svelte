@@ -6,10 +6,6 @@
 			path: '/',
 			name: 'introduction',
 		},
-		{
-			path: '/about',
-			name: 'about',
-		},
 	]
 </script>
 

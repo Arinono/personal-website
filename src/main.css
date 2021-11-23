@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 body {
-	background: fixed content-box transparent url('/background-light.jpg') no-repeat center / cover;
+	background: #ba30ff;
+	background-image: 
+		radial-gradient(at 20% 80%, #D76DA9 0, transparent 100%),
+		radial-gradient(at 80% 20%, #66FDF7 0, transparent 100%);
 }
 body.dark {
-	background-image: url('/background-dark.jpg');
+	background: #8000ff;
+	background-image: 
+		radial-gradient(at 20% 80%, hsl(212.37, 72%, 59%) 0, transparent 100%),
+		radial-gradient(at 80% 20%, hsl(289.90, 87%, 47%) 0, transparent 100%);
 }
