@@ -1,34 +1,50 @@
 <script>
+	import { safeUrl } from '../../utils/safeUrl'
 	export let current
 
 	const routes = [
 		{
-			path: '/',
+			href: '/',
 			name: 'introduction',
 		},
 		{
-			path: '/resume.pdf',
+			href: '/resume.pdf',
 			name: 'resume',
+		},
+		{
+			href: 'https://www.linkedin.com/in/aurelien-arino/',
+			name: 'linkedin'
+		},
+		{
+			href: 'https://github.com/arinono',
+			name: 'github'
 		}
 	].map(r => {
 		const download = (() => {
-			if (r.path.includes('.pdf')) {
-				return r.path.replace('/', '')
+			if (r.href.includes('.pdf')) {
+				return r.href.replace('/', '')
 			}
 			return null
 		})()
-		return download ? { ...r, download } : r
+		const target = (() => {
+			const url = safeUrl(r.href)
+			if (url) {
+				return '_blank'
+			}
+			return null
+		})()
+
+		return { ...r, download, target }
 	})
 </script>
 
 <div class="flex flex-row items-center space-x-4 mx-4">
-	{#each routes as r}
+	{#each routes as { name, href, download, target }}
 		<a
-			sveltekit:prefetch
 			class={`text-gray-700 dark:text-white border-b-2 ${
-				r.name === current ? 'border-blue-500' : 'border-transparent'
+				name === current ? 'border-blue-500' : 'border-transparent'
 			}`}
-			href={r.path} download={r.download}>{r.name}</a
+			{href} {download} {target}>{name}</a
 		>
 	{/each}
 </div>
