@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte'
-	import { theme } from '../stores/theme'
-	import { storage } from '../utils/storage'
+	import { theme } from '@stores'
+	import { storage } from '@utils'
 
-	import ADarkModeToggle from '../components/atoms/DarkModeToggle.svelte'
+	import { ADarkModeToggle } from '@atoms'
 
 	let themeStorage
 

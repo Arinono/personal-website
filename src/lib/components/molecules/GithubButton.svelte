@@ -1,5 +1,5 @@
 <script>
-  import AGithubLogo from '../atoms/GithubLogo.svelte'
+  import { AGithubLogo } from '@atoms'
 
   export let user
 </script>

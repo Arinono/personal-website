@@ -18,8 +18,8 @@ export const theme = {
 		updateDom(el, get(_theme))
 	},
 	init: (ls, el) => {
-		const initial = ['dark', 'light'].includes(ls)
-			? ls
+		const initial = ['dark', 'light'].includes(ls.get())
+			? ls.get()
 			: window.matchMedia('(prefers-color-scheme: dark)').matches
 			? 'dark'
 			: 'light'
