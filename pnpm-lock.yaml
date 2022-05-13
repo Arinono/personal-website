@@ -10,6 +10,7 @@ specifiers:
   postcss: ^8.4.13
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
+  rimraf: ^3.0.2
   svelte: ^3.48.0
   tailwindcss: ^2.2.19
 
@@ -23,6 +24,7 @@ devDependencies:
   postcss: 8.4.13
   prettier: 2.6.2
   prettier-plugin-svelte: 2.7.0_kkjbqzpydplecjtkxrgomroeru
+  rimraf: 3.0.2
   svelte: 3.48.0
   tailwindcss: 2.2.19_cr4sis33dk4di3xnobyqnqmrf4
 
