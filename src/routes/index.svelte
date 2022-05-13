@@ -14,12 +14,12 @@
 		},
 		{
 			href: 'https://www.linkedin.com/in/aurelien-arino/',
-			name: 'linkedin'
+			name: 'linkedin',
 		},
 		{
 			href: 'https://github.com/arinono',
-			name: 'github'
-		}
+			name: 'github',
+		},
 	]
 </script>
 
