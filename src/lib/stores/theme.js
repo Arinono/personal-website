@@ -3,30 +3,29 @@ import { writable, get } from 'svelte/store'
 const _theme = writable('dark')
 
 const updateDom = (el, v) => {
-	if (v === 'dark') {
-		el.classList.add('dark')
-	} else {
-		el.classList.remove('dark')
-	}
+	el.classList[v === 'dark' ? 'add' : 'remove']('dark')
 }
 
 export const theme = {
 	toggle: (ls, el) => {
-		_theme.update((t) => (t === 'dark' ? 'light' : 'dark'))
-		ls.set(get(_theme))
-
-		updateDom(el, get(_theme))
+		const val = get(_theme)
+		const target = val === 'dark' ? 'light' : 'dark'
+		
+		updateDom(el, target)
+		_theme.update(() => target)
+		ls.set(target)
 	},
 	init: (ls, el) => {
-		const initial = ['dark', 'light'].includes(ls.get())
-			? ls.get()
+		const val = ls.get()
+		const initial = ['dark', 'light'].includes(val)
+			? val
 			: window.matchMedia('(prefers-color-scheme: dark)').matches
-			? 'dark'
-			: 'light'
+				? 'dark'
+				: 'light'
 
+		updateDom(el, get(_theme))
 		_theme.set(initial)
 		ls.set(initial)
-		updateDom(el, get(_theme))
 	},
 	..._theme,
 }
