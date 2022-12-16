@@ -27,7 +27,7 @@
 			</h2>
 			<div class="mt-4 flex items-center space-x-4">
 				<MGithubButton {user} />
-				<AButton href="mailto:aurelien.arino@gmail.com">contact me</AButton>
+				<AButton href="mailto:aurelien@arino.io">contact me</AButton>
 			</div>
 		</div>
 		<img
