@@ -15,9 +15,9 @@ const config = {
 					'@molecules': path.resolve('src/lib/components/molecules'),
 					'@organisms': path.resolve('src/lib/components/organisms'),
 					'@templates': path.resolve('src/lib/components/templates'),
-				}
-			}
-		}
+				},
+			},
+		},
 	},
 }
 

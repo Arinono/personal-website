@@ -4,13 +4,11 @@
 
 body {
 	background: #ba30ff;
-	background-image: 
-		radial-gradient(at 20% 80%, #D76DA9 0, transparent 100%),
-		radial-gradient(at 80% 20%, #66FDF7 0, transparent 100%);
+	background-image: radial-gradient(at 20% 80%, #d76da9 0, transparent 100%),
+		radial-gradient(at 80% 20%, #66fdf7 0, transparent 100%);
 }
 body.dark {
 	background: #8000ff;
-	background-image: 
-		radial-gradient(at 20% 80%, hsl(212.37, 72%, 59%) 0, transparent 100%),
-		radial-gradient(at 80% 20%, hsl(289.90, 87%, 47%) 0, transparent 100%);
+	background-image: radial-gradient(at 20% 80%, hsl(212.37, 72%, 59%) 0, transparent 100%),
+		radial-gradient(at 80% 20%, hsl(289.9, 87%, 47%) 0, transparent 100%);
 }
